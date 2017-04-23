@@ -1,0 +1,33 @@
+package common;
+
+/**
+ *该类为身份认证信息类，用于登录注册时传递身份认证 
+ *@author yzj
+ */
+public class Credential {
+    private String userID;
+    private String password;
+    /**
+     * 构造方法
+     * @param 用户名
+     * @param 密码
+     */
+    public Credential(String userID, String password){
+    	this.userID=userID;
+    	this.password=password;
+    }
+    /**
+     * 获得用户名
+     * @return 用户名
+     */
+    public String getUserID(){
+    	return userID;
+    }
+    /**
+     * 获得密码
+     * @return 密码
+     */
+    public String getPassword(){
+    	return password;
+    }
+}

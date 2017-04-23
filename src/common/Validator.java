@@ -1,0 +1,51 @@
+package common;
+
+//import java.util.Scanner;
+import java.util.regex.*;
+
+/**
+ * 该类为字符串合法性判断类
+ * @author yzj
+ * 判断用户名和密码是否合法
+ */
+public final class Validator {
+    
+    /**
+     * 判断用户名合法性
+     * 长度1~64，仅含数字字母_-
+     * @param userID
+     * @return true or false
+     */
+    public static boolean isUserIDLegal(String userID){
+    	Pattern pattern=Pattern.compile("^[0-9a-zA-Z_-]{1,64}$");
+    	Matcher matcher=pattern.matcher(userID);
+    	if (matcher.matches())
+    		return true;
+    	else 
+    		return false;
+    }
+    
+    /**判断密码是否合法
+     * 长度8-64，仅含数字字母-_
+     * @param password
+     * @return true or false
+     */
+    public static boolean isPasswdLegal(String password){
+    	Pattern pattern=Pattern.compile("^[0-9a-zA-Z_-]{8,64}$");
+    	Matcher matcher=pattern.matcher(password);
+    	if (matcher.matches())
+    		return true;
+    	else 
+    		return false;
+    }
+    
+    /*public static void main(String args[]){
+    	System.out.println("输入数据");
+    	Scanner sc = new Scanner(System.in); 
+    	String s=sc.nextLine();
+    	sc.close();
+    	System.out.println(Validator.isUserIDLegal(s));
+    }*/
+}
+
+
