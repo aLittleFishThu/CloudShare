@@ -78,4 +78,35 @@ public final class Convert {
 		else
 			return ChangePasswdResult.unknownError;
 	}
+	/**
+	 * 字符串转权限
+	 * @param s
+	 * @return Authorization
+	 */
+	public static Authorization toAuthorization (String s){
+		HashMap<String,Authorization> map=new HashMap<String,Authorization>();
+		for(Authorization status:Authorization.values()) {
+            map.put(status.toString(), status);
+        }
+		if (map.containsKey(s))
+			return map.get(s);
+		else
+			return Authorization.unknownError;
+	}
+	
+	/**
+	 * 字符串转文件操作结果
+	 * @param s
+	 * @return
+	 */
+	public static FileResult toFileResult (String s){
+		HashMap<String,FileResult> map=new HashMap<String,FileResult>();
+		for(FileResult status:FileResult.values()) {
+            map.put(status.toString(), status);
+        }
+		if (map.containsKey(s))
+			return map.get(s);
+		else
+			return FileResult.unknownError;
+	}
 }
