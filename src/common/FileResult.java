@@ -7,7 +7,7 @@ package common;
  * unknownError-Î´Öª´íÎó
  */
 public enum FileResult {
-	OK("OK"),unAuthorized("unAuthorized"),wrongID("wrongID"),
+	OK("OK"),unAuthorized("unAuthorized"),wrong("wrong"),
 	unknownError("unknownError");
 	
 	private String status;
