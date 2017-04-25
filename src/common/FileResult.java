@@ -3,7 +3,7 @@ package common;
 /**
  * 文件操作结果
  * @author yzj
- * OK-操作成功 unAuthorized-未登录  wrong-文件不存在或无权操作
+ * OK-操作成功 unAuthorized-未登录  wrong-文件/用户不存在或无权操作
  * unknownError-未知错误
  */
 public enum FileResult {

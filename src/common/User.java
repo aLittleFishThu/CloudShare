@@ -12,6 +12,11 @@ import java.io.Serializable;
 public class User implements Serializable{
 	private String userID;
 	private String password;
+	
+	public User(){
+		userID="";
+		password="";
+	}
 
 	/**
 	 * 使用用户名和密码生成用户类

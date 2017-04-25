@@ -19,6 +19,14 @@ public class FileDirectoryResult {
 		result=FileResult.OK;
 	}
 	/**
+	 * 一参数构造方法
+	 * @param result
+	 */
+	public FileDirectoryResult(FileResult result){
+		fileDirectory=new HashSet<CloudFile>();
+		this.result=result;
+	}
+	/**
 	 * 两参数构造方法
 	 * @param fileDirectory
 	 * @param result
