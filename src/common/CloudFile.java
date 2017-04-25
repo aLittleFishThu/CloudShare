@@ -99,6 +99,23 @@ public class CloudFile implements Serializable{
 				+","+authorization.getStatus()+","+openList.toString()+")";
 		return s;
 	}
+	@Override
+	/**
+	 * 改写equals方法
+	 * fileID相同认为两个文件完全相同
+	 */
+	public boolean equals(Object object){
+	   	if (this==object)   //引用相同，直接返回true
+    		return true;
+    	if (object instanceof CloudFile){     //类型相同
+    		CloudFile cloudFile2=(CloudFile) object;    //强制转换类型
+    		if (this.fileID.equals(cloudFile2.getFileID()))
+    			return true;
+    		else return false;
+    	}
+    	else
+    		return false;    //类型不同，直接返回false		
+	}
 	
     private void writeObject(java.io.ObjectOutputStream s)
             throws java.io.IOException {
