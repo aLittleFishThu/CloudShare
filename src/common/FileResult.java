@@ -24,10 +24,5 @@ public enum FileResult {
     public String getStatus() {
       return status;
     }
-    /**
-     * Éè¶¨×Ö·û´®
-     */
-    public void setStatus(String status) {
-      this.status = status;
-    }
+
 }

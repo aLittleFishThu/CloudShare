@@ -27,11 +27,4 @@ public enum ChangePasswdResult {
     public String getStatus() {
       return status;
     }
-    /**
-     * 设置修改密码结果
-     * @param status
-     */
-    public void setStatus(String status) {
-      this.status = status;
-    }
 }

@@ -25,11 +25,4 @@ public enum RegisterResult {
 	public String getStatus() {
 	  return status;
 	}
-	/**
-	 * 设置注册结果
-	 * @param status 注册结果
-	 */
-	public void setStatus(String status) {
-	    this.status = status;
-	}
 }

@@ -23,10 +23,4 @@ public enum LoginResult {
     public String getStatus() {
       return status;
     }
-    /**
-     * Éè¶¨µÇÂ¼×´Ì¬
-     */
-    public void setStatus(String status) {
-      this.status = status;
-    }
 }
