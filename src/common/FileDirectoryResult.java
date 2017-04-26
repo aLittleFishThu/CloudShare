@@ -12,11 +12,11 @@ public class FileDirectoryResult {
 	private FileResult result;
 	
 	/**
-	 * 无参构造方法
+	 * 无参构造方法，默认获取失败
 	 */
 	public FileDirectoryResult(){
 		fileDirectory=new HashSet<CloudFile>();
-		result=FileResult.OK;
+		result=FileResult.wrong;
 	}
 	/**
 	 * 一参数构造方法
