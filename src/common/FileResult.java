@@ -7,10 +7,10 @@ package common;
  * unknownError-未知错误
  */
 public enum FileResult {
-	OK("OK"),unAuthorized("unAuthorized"),wrong("wrong"),
-	unknownError("unknownError");
-	
-	private String status;
+    OK("OK"),unAuthorized("unAuthorized"),wrong("wrong"),
+    unknownError("unknownError");
+    
+    private String status;
     /**
      * 私有构造方法
      * @param 文件操作状态
@@ -26,3 +26,4 @@ public enum FileResult {
     }
 
 }
+
