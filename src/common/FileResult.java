@@ -24,6 +24,5 @@ public enum FileResult {
     public String getStatus() {
       return status;
     }
-
 }
 
