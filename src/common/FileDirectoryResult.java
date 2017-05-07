@@ -1,6 +1,6 @@
 package common;
 
-import java.util.HashSet;
+import java.util.ArrayList;
 
 /**
  * 下载文件目录结果
@@ -8,14 +8,14 @@ import java.util.HashSet;
  * 包括文件信息构成的HashSet和下载结果
  */
 public class FileDirectoryResult {
-	private HashSet<CloudFile> fileDirectory;
+	private ArrayList<CloudFile> fileDirectory;
 	private FileResult result;
 	
 	/**
 	 * 无参构造方法，默认获取失败
 	 */
 	public FileDirectoryResult(){
-		fileDirectory=new HashSet<CloudFile>();
+		fileDirectory=new ArrayList<CloudFile>();
 		result=FileResult.wrong;
 	}
 	/**
@@ -23,7 +23,7 @@ public class FileDirectoryResult {
 	 * @param result
 	 */
 	public FileDirectoryResult(FileResult result){
-		fileDirectory=new HashSet<CloudFile>();
+		fileDirectory=new ArrayList<CloudFile>();
 		this.result=result;
 	}
 	/**
@@ -31,15 +31,15 @@ public class FileDirectoryResult {
 	 * @param fileDirectory
 	 * @param result
 	 */
-	public FileDirectoryResult(HashSet<CloudFile> fileDirectory,FileResult result){
+	public FileDirectoryResult(ArrayList<CloudFile> fileDirectory,FileResult result){
 		this.fileDirectory=fileDirectory;
 		this.result=result;
 	}
 	
-	public HashSet<CloudFile> getFileDirectory() {
+	public ArrayList<CloudFile> getFileDirectory() {
 		return fileDirectory;
 	}
-	public void setFileDirectory(HashSet<CloudFile> fileDirectory) {
+	public void setFileDirectory(ArrayList<CloudFile> fileDirectory) {
 		this.fileDirectory = fileDirectory;
 	}
 	public FileResult getResult() {
