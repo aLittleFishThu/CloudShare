@@ -30,6 +30,7 @@ public class Note implements Serializable{
     public Note(String content,String fileID){
         this.content=content;
         this.fileID=fileID;
+        noteID="";creator="";uploadTime="";
     }
    
     /**
@@ -42,6 +43,7 @@ public class Note implements Serializable{
         this.content=content;
         this.fileID=fileID;
         this.creator=creator;
+        noteID="";uploadTime="";
     }
     
     public String getNoteID() {
@@ -73,6 +75,24 @@ public class Note implements Serializable{
     }
     public void setUploadTime(String uploadTime) {
         this.uploadTime = uploadTime;
+    }
+    
+    @Override
+    /**
+     * 改写equals方法
+     * fileID和noteID相同认为两个备注完全相同
+     */
+    public boolean equals(Object object){
+        if (this==object)   //引用相同，直接返回true
+            return true;
+        if (object instanceof Note){     //类型相同
+            Note note2=(Note) object;    //强制转换类型
+            if (this.fileID.equals(note2.getFileID())&&(this.noteID.equals(note2.getNoteID())))
+                return true;
+            else return false;
+        }
+        else
+            return false;    //类型不同，直接返回false       
     }
     
     public String toString(){
