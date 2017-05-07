@@ -1,10 +1,10 @@
 package test;
 
-import common.FileResult;
+import common.DeleteFileResult;
 
 public class TestEnum {
 	public static void main(String args[]){
-		FileResult fileResult=FileResult.valueOf("O");
+		DeleteFileResult fileResult=DeleteFileResult.valueOf("O");
 		System.out.println(fileResult);
 	}
 }
