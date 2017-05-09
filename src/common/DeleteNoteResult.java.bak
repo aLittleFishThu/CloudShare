@@ -1,13 +1,13 @@
-package common;
+﻿package common;
 
 /**
- * 文件操作结果
+ * 备注操作结果
  * @author yzj
- * OK-操作成功 unAuthorized-未登录  wrong-文件不存在或无权操作 tooLong-备注太长
+ * OK-操作成功 unAuthorized-未登录  wrong-文件/备注不存在或无权操作
  * unknownError-未知错误
  */
-public enum AddNoteResult {
-    OK("OK"),unAuthorized("unAuthorized"),wrong("wrong"),tooLong("tooLong"),
+public enum DeleteNoteResult {
+    OK("OK"),unAuthorized("unAuthorized"),wrong("wrong"),
     unknownError("unknownError");
     
     private String status;
@@ -15,7 +15,7 @@ public enum AddNoteResult {
      * 私有构造方法
      * @param 备注操作状态
      */
-    private AddNoteResult(String status){
+    private DeleteNoteResult(String status){
       this.status=status;
     }
     /**

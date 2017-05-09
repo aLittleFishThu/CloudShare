@@ -1,10 +1,10 @@
 package common;
 
 /**
- * ÉÏ´«ÎÄ¼ş²Ù×÷½á¹û
+ * ä¸Šä¼ æ–‡ä»¶æ“ä½œç»“æœ
  * @author yzj
- * OK-²Ù×÷³É¹¦ unAuthorized-Î´µÇÂ¼  wrong-ÎÄ¼ş/ÓÃ»§²»´æÔÚ»òÎŞÈ¨²Ù×÷
- * tooLarge-ÎÄ¼şÌ«´ó unknownError-Î´Öª´íÎó
+ * OK-æ“ä½œæˆåŠŸ unAuthorized-æœªç™»å½•  wrong-æ–‡ä»¶/ç”¨æˆ·ä¸å­˜åœ¨æˆ–æ— æƒæ“ä½œ
+ * tooLarge-æ–‡ä»¶å¤ªå¤§ unknownError-æœªçŸ¥é”™è¯¯
  */
 public enum UploadFileResult {
     OK("OK"),unAuthorized("unAuthorized"),wrong("wrong"),tooLarge("tooLarge"),
@@ -12,14 +12,14 @@ public enum UploadFileResult {
     
     private String status;
     /**
-     * Ë½ÓĞ¹¹Ôì·½·¨
-     * @param ÎÄ¼ş²Ù×÷×´Ì¬
+     * ç§æœ‰æ„é€ æ–¹æ³•
+     * @param æ–‡ä»¶æ“ä½œçŠ¶æ€
      */
     private UploadFileResult(String status){
       this.status=status;
     }
     /**
-     * »ñÈ¡×Ö·û´®
+     * è·å–å­—ç¬¦ä¸²
      */
     public String getStatus() {
       return status;

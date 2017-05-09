@@ -1,4 +1,4 @@
-package common;
+﻿package common;
 
 /**
  * 标记登录状态

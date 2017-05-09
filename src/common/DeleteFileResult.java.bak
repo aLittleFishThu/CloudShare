@@ -1,4 +1,4 @@
-package common;
+﻿package common;
 
 /**
  * 删除文件操作结果

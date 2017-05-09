@@ -1,10 +1,10 @@
 package common;
 
 /**
- * ±¸×¢²Ù×÷½á¹û
+ * å¤‡æ³¨æ“ä½œç»“æœ
  * @author yzj
- * OK-²Ù×÷³É¹¦ unAuthorized-Î´µÇÂ¼  wrong-ÎÄ¼ş/±¸×¢²»´æÔÚ»òÎŞÈ¨²Ù×÷
- * unknownError-Î´Öª´íÎó
+ * OK-æ“ä½œæˆåŠŸ unAuthorized-æœªç™»å½•  wrong-æ–‡ä»¶/å¤‡æ³¨ä¸å­˜åœ¨æˆ–æ— æƒæ“ä½œ
+ * unknownError-æœªçŸ¥é”™è¯¯
  */
 public enum DeleteNoteResult {
     OK("OK"),unAuthorized("unAuthorized"),wrong("wrong"),
@@ -12,14 +12,14 @@ public enum DeleteNoteResult {
     
     private String status;
     /**
-     * Ë½ÓĞ¹¹Ôì·½·¨
-     * @param ±¸×¢²Ù×÷×´Ì¬
+     * ç§æœ‰æ„é€ æ–¹æ³•
+     * @param å¤‡æ³¨æ“ä½œçŠ¶æ€
      */
     private DeleteNoteResult(String status){
       this.status=status;
     }
     /**
-     * »ñÈ¡×Ö·û´®
+     * è·å–å­—ç¬¦ä¸²
      */
     public String getStatus() {
       return status;

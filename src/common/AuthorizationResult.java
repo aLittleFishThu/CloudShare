@@ -1,21 +1,21 @@
 package common;
 
 /**
- * 文件操作结果
+ * 设置权限操作结果
  * @author yzj
- * OK-操作成功 unAuthorized-未登录  wrong-文件不存在或无权操作 tooLong-备注太长
+ * OK-操作成功 unAuthorized-未登录  wrong-文件/用户不存在或无权操作
  * unknownError-未知错误
  */
-public enum AddNoteResult {
-    OK("OK"),unAuthorized("unAuthorized"),wrong("wrong"),tooLong("tooLong"),
+public enum AuthorizationResult {
+    OK("OK"),unAuthorized("unAuthorized"),wrong("wrong"),
     unknownError("unknownError");
     
     private String status;
     /**
      * 私有构造方法
-     * @param 备注操作状态
+     * @param 权限操作状态
      */
-    private AddNoteResult(String status){
+    private AuthorizationResult(String status){
       this.status=status;
     }
     /**
@@ -24,6 +24,5 @@ public enum AddNoteResult {
     public String getStatus() {
       return status;
     }
-
 }
 

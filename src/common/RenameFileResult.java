@@ -1,10 +1,10 @@
 package common;
 
 /**
- * É¾³ıÎÄ¼ş²Ù×÷½á¹û
+ * åˆ é™¤æ–‡ä»¶æ“ä½œç»“æœ
  * @author yzj
- * OK-²Ù×÷³É¹¦ unAuthorized-Î´µÇÂ¼  wrong-ÎÄ¼ş/ÓÃ»§²»´æÔÚ»òÎŞÈ¨²Ù×÷
- * repeatedName-ÓëÆäËûÎÄ¼şÃû³åÍ» unknownError-Î´Öª´íÎó
+ * OK-æ“ä½œæˆåŠŸ unAuthorized-æœªç™»å½•  wrong-æ–‡ä»¶/ç”¨æˆ·ä¸å­˜åœ¨æˆ–æ— æƒæ“ä½œ
+ * repeatedName-ä¸å…¶ä»–æ–‡ä»¶åå†²çª unknownError-æœªçŸ¥é”™è¯¯
  */
 public enum RenameFileResult {
     OK("OK"),unAuthorized("unAuthorized"),wrong("wrong"),
@@ -12,14 +12,14 @@ public enum RenameFileResult {
     
     private String status;
     /**
-     * Ë½ÓĞ¹¹Ôì·½·¨
-     * @param ÎÄ¼ş²Ù×÷×´Ì¬
+     * ç§æœ‰æ„é€ æ–¹æ³•
+     * @param æ–‡ä»¶æ“ä½œçŠ¶æ€
      */
     private RenameFileResult(String status){
       this.status=status;
     }
     /**
-     * »ñÈ¡×Ö·û´®
+     * è·å–å­—ç¬¦ä¸²
      */
     public String getStatus() {
       return status;

@@ -1,4 +1,4 @@
-package common;
+﻿package common;
 
 public class DownloadFileResult {
     public enum DownloadFileStatus {
