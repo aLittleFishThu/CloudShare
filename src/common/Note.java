@@ -4,7 +4,7 @@ import java.io.Serializable;
 
 
 @SuppressWarnings("serial")
-public class Note implements Serializable{
+public class Note implements Serializable,Comparable<Note>{
     private String noteID;                  //唯一标识符
     private String content;                 //备注内容
     private String fileID;                  //文件ID
@@ -117,5 +117,14 @@ public class Note implements Serializable{
         fileID = (String) s.readObject();
         creator = (String) s.readObject();
         uploadTime= (String) s.readObject();
+    }
+
+    @Override
+    public int compareTo(Note o) {
+        int result=this.uploadTime.compareTo(o.getUploadTime());
+        if (result==0)
+           return this.creator.compareTo(o.getCreator()); 
+        else
+            return result;
     }
 }

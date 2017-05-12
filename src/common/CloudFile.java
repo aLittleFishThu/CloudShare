@@ -10,13 +10,13 @@ import java.util.HashSet;
  * 包含ID、创建者、文件名、上传时间、权限
  */
 @SuppressWarnings("serial")
-public class CloudFile implements Serializable{
-	private String fileID;   				//唯一标识符
-	private String creator;  				//创建者
-	private String filename; 				//文件名
-	private String uploadTime;				//上传时间
+public class CloudFile implements Serializable,Comparable<CloudFile>{
+	private String fileID;   		//唯一标识符
+	private String creator;  		//创建者
+	private String filename; 		//文件名
+	private String uploadTime;		//上传时间
 	private Authorization authorization;	//权限
-	private HashSet<String> openList;		//开放列表
+	private HashSet<String> openList;       //开放列表
 	
 	public CloudFile(){
 		fileID="";creator="";filename="";uploadTime="";
@@ -138,5 +138,14 @@ public class CloudFile implements Serializable{
         uploadTime= (String) s.readObject();
         authorization= (Authorization) s.readObject();
         openList = (HashSet<String>) s.readObject();
+    }
+
+    @Override
+    public int compareTo(CloudFile o) {
+        int result=this.uploadTime.compareTo(o.getUploadTime());
+        if (result==0)
+           return this.filename.compareTo(o.getFilename()); 
+        else
+            return result;
     }
 }
